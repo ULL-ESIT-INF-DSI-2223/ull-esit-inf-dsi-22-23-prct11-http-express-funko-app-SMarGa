@@ -1,0 +1,4 @@
+{
+  "entryPoints": ["./src/Funkos/*", "./src/Enums/*", "./src/Ejercicios-PE/*"],
+  "out": "./docs"
+}
