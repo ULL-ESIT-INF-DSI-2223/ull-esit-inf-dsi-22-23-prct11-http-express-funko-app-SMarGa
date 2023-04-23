@@ -62,19 +62,20 @@
   <h3>2.2 Ejercicio de Servidor</h3>
 </a>
 <p>Me limitaré a explicar el funcionamiento del servidor puesto que las otras clases ya se han explicado en informes anteriores.</p>
-<p>Para comenzar, para añadir un funko se utiliza una petición como la siguiente (recomiendo el uso de Thunder Client para la comprobación):</p>
+<p>Dentro del manejador de /funko , se realizan algunas comprobaciones para asegurarse de que los datos necesarios se proporcionen en la solicitud. Si se encuentra algún error, se devuelve un objeto con un código de error y un mensaje explicando qué es lo que salió mal.</p>
+<p>Si el comando de la solicitud es &quot;post&quot;, se comprueba que se hayan proporcionado todos los campos necesarios y se crea un nuevo objeto Funko con los valores proporcionados. Luego, se intenta agregar este objeto Funko a una base de datos utilizando la función &quot;addFunko&quot; de la clase &quot;FunkoUserDataBase&quot;. Si se agrega correctamente, se devuelve un objeto con un código de éxito y un mensaje de confirmación. De lo contrario, se devuelve un objeto con un código de error y un mensaje explicando qué salió mal.</p>
+<p>Para añadir un funko se utiliza una petición como la siguiente (recomiendo el uso de Thunder Client para la comprobación):</p>
 <pre><code><span class="hl-0">http</span><span class="hl-1">:</span><span class="hl-2">//localhost:3000/funko?command=post&amp;id=15&amp;name=Megafunko&amp;description=Funko de prueba&amp;type=Regular&amp;genre=Peliculas&amp;franchise=Marvel&amp;serial=1&amp;exclusive=true&amp;especial=none&amp;price=15&amp;user_name=Saul</span>
 </code></pre>
-<p>El servidor procesa esta información e intenta guardar ese funko. Si lo hace correctamente devuelve un json con un código de error 0 y un mensaje de confirmacion ya que no se produjo un error y en otro caso devuelve un json con un código de error 1 y un mensaje de error.</p>
-<p>De forma similar se implementa el delete:</p>
+<p>Si el comando de la solicitud es &quot;delete&quot;, se comprueba que se hayan proporcionado un nombre de usuario y un ID de Funko. Luego, se intenta eliminar el Funko con ese ID de la base de datos utilizando la función &quot;removeFunko&quot; de la clase &quot;FunkoUserDataBase&quot;. Si se elimina correctamente, se devuelve un objeto con un código de éxito y un mensaje de confirmación. De lo contrario, se devuelve un objeto con un código de error y un mensaje explicando qué salió mal.</p>
+<p>De forma similar una petición de delete sería:</p>
 <pre><code><span class="hl-0">http</span><span class="hl-1">:</span><span class="hl-2">//localhost:3000/funko?command=delete&amp;id=15&amp;user_name=Saul</span>
 </code></pre>
-<p>El servidor responde de manera similar al anteriror pero con diferentes mensajes de error.</p>
 
 <a href="#3-conclusión" id="3-conclusión" style="color: inherit; text-decoration: none;">
   <h2>3. Conclusión</h2>
 </a>
-<p>A lo largo de la realización de la práctica me he familiarizado con el uso de la API sincrona de Node.js para tranajar con fichero así como el uso de la librería yargs para la gestión de parámetros de una entrada por linea de comando y el uso de chalk para destacar mensajes mostrados por consola.</p>
+<p>A lo largo de la realización de la práctica me he familiarizado con el uso de express para la creación de un servidor y como gestionar las peticiones a travéz de manejadores.</p>
 
 <a href="#4-bibliografía" id="4-bibliografía" style="color: inherit; text-decoration: none;">
   <h2>4. Bibliografía</h2>
