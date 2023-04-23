@@ -41,25 +41,27 @@ Por otro lado spawn requiere de manejadores para su salida estandar, la salida e
 
 Me limitaré a explicar el funcionamiento del servidor puesto que las otras clases ya se han explicado en informes anteriores.
 
-Para comenzar, para añadir un funko se utiliza una petición como la siguiente (recomiendo el uso de Thunder Client para la comprobación):
+Dentro del manejador de /funko , se realizan algunas comprobaciones para asegurarse de que los datos necesarios se proporcionen en la solicitud. Si se encuentra algún error, se devuelve un objeto con un código de error y un mensaje explicando qué es lo que salió mal.
+
+Si el comando de la solicitud es "post", se comprueba que se hayan proporcionado todos los campos necesarios y se crea un nuevo objeto Funko con los valores proporcionados. Luego, se intenta agregar este objeto Funko a una base de datos utilizando la función "addFunko" de la clase "FunkoUserDataBase". Si se agrega correctamente, se devuelve un objeto con un código de éxito y un mensaje de confirmación. De lo contrario, se devuelve un objeto con un código de error y un mensaje explicando qué salió mal.
+
+Para añadir un funko se utiliza una petición como la siguiente (recomiendo el uso de Thunder Client para la comprobación):
 
 ```
 http://localhost:3000/funko?command=post&id=15&name=Megafunko&description=Funko de prueba&type=Regular&genre=Peliculas&franchise=Marvel&serial=1&exclusive=true&especial=none&price=15&user_name=Saul
 ```
 
-El servidor procesa esta información e intenta guardar ese funko. Si lo hace correctamente devuelve un json con un código de error 0 y un mensaje de confirmacion ya que no se produjo un error y en otro caso devuelve un json con un código de error 1 y un mensaje de error.
+Si el comando de la solicitud es "delete", se comprueba que se hayan proporcionado un nombre de usuario y un ID de Funko. Luego, se intenta eliminar el Funko con ese ID de la base de datos utilizando la función "removeFunko" de la clase "FunkoUserDataBase". Si se elimina correctamente, se devuelve un objeto con un código de éxito y un mensaje de confirmación. De lo contrario, se devuelve un objeto con un código de error y un mensaje explicando qué salió mal.
 
-De forma similar se implementa el delete:
+De forma similar una petición de delete sería:
 
 ```
 http://localhost:3000/funko?command=delete&id=15&user_name=Saul
 ```
 
-El servidor responde de manera similar al anteriror pero con diferentes mensajes de error.
-
 ## 3. Conclusión
 
-A lo largo de la realización de la práctica me he familiarizado con el uso de la API sincrona de Node.js para tranajar con fichero así como el uso de la librería yargs para la gestión de parámetros de una entrada por linea de comando y el uso de chalk para destacar mensajes mostrados por consola.
+A lo largo de la realización de la práctica me he familiarizado con el uso de express para la creación de un servidor y como gestionar las peticiones a travéz de manejadores.
 
 ## 4. Bibliografía
 
