@@ -1,0 +1,127 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>ull-esit-inf-dsi-22-23-prct11-http-express-funko-app-smarga</title><meta name="description" content="Documentation for ull-esit-inf-dsi-22-23-prct11-http-express-funko-app-smarga"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base=".">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">ull-esit-inf-dsi-22-23-prct11-http-express-funko-app-smarga</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-8 col-content">
+<div class="tsd-page-title">
+<h2>ull-esit-inf-dsi-22-23-prct11-http-express-funko-app-smarga</h2></div>
+<div class="tsd-panel tsd-typography">
+<a href="#indice" id="indice" style="color: inherit; text-decoration: none;">
+  <h2>Indice</h2>
+</a>
+<ol>
+<li><p><a href="#1-introducci%C3%B3n">Introducción</a></p>
+</li>
+<li><p><a href="#2-funko-app">Funko-APP</a></p>
+<ol>
+<li><a href="#21-ejercicio-PE">Ejercicio 1</a></li>
+<li><a href="#22-ejercicio-2">Ejercicio 2</a></li>
+<li><a href="#23-ejercicio-3">Ejercicio 3</a></li>
+</ol>
+</li>
+<li><p><a href="#3-conclusi%C3%B3n">Conclusión</a></p>
+</li>
+<li><p><a href="#4-bibliograf%C3%ADa">Bibliografía</a></p>
+</li>
+</ol>
+
+<a href="#1-introducción" id="1-introducción" style="color: inherit; text-decoration: none;">
+  <h2>1. Introducción</h2>
+</a>
+<p>A lo largo de este documento se recogerán los aspectos técnicos de la implementacion propuesta para el problema planteado en el enunciado de la práctica así como dificultades encontradas en su desarrollo.</p>
+<p>Durante la elaboración del sistema, se han utilizado las siguientes herramientas:</p>
+<ul>
+<li><strong>ESLint</strong> para la comprobación de errores</li>
+<li><strong>Prettier</strong> para el formateo del código</li>
+<li><strong>TypeDoc</strong> para la generación automática de documentación del código</li>
+<li><strong>Mocha</strong> y <strong>Chai</strong> para el desarrollo dirigido por pruebas</li>
+<li><strong>Instanbul</strong> para la comprobación del cubrimiento del código fuente</li>
+<li><strong>GitHub Actions</strong> para la integración continua del código ejecutado en <strong>Node.js</strong>, el envío de información de cubrimiento a <strong>Coveralls</strong> y la comprobación de calidad y seguridad del código fuente con <strong>Sonar Cloud</strong></li>
+</ul>
+
+<a href="#2-ejercicios-propuestos" id="2-ejercicios-propuestos" style="color: inherit; text-decoration: none;">
+  <h2>2. Ejercicios propuestos</h2>
+</a>
+
+<a href="#21-ejercicio-pe" id="21-ejercicio-pe" style="color: inherit; text-decoration: none;">
+  <h3>2.1 Ejercicio PE</h3>
+</a>
+<p>En el ejerciio PE se nos propuso realizar peticiones de comandos a ser ejecutados en el servidor y devolver el resultado segun si se pudo ejecutar, si devuelve un error o si se ejecuta el resultado de la ejecución.</p>
+<p>Para llevar a cabo esto, se han realizado dos soluciones diferentes, una utilizando exec y otra utilizando spawn.</p>
+<p>Con exec es mucha más sencillo debido a que en la propia ejecución del comando se puede controlar si ocurrio un error.</p>
+<p>Por otro lado spawn requiere de manejadores para su salida estandar, la salida estandar de error y si ocurre un error en la propia ejecución. De manera que en este caso no se enviará hasta que no se termine de recibir la respuesta.</p>
+
+<a href="#22-ejercicio-de-servidor" id="22-ejercicio-de-servidor" style="color: inherit; text-decoration: none;">
+  <h3>2.2 Ejercicio de Servidor</h3>
+</a>
+<p>Me limitaré a explicar el funcionamiento del servidor puesto que las otras clases ya se han explicado en informes anteriores.</p>
+<p>Para comenzar, para añadir un funko se utiliza una petición como la siguiente (recomiendo el uso de Thunder Client para la comprobación):</p>
+<pre><code><span class="hl-0">http</span><span class="hl-1">:</span><span class="hl-2">//localhost:3000/funko?command=post&amp;id=15&amp;name=Megafunko&amp;description=Funko de prueba&amp;type=Regular&amp;genre=Peliculas&amp;franchise=Marvel&amp;serial=1&amp;exclusive=true&amp;especial=none&amp;price=15&amp;user_name=Saul</span>
+</code></pre>
+<p>El servidor procesa esta información e intenta guardar ese funko. Si lo hace correctamente devuelve un json con un código de error 0 y un mensaje de confirmacion ya que no se produjo un error y en otro caso devuelve un json con un código de error 1 y un mensaje de error.</p>
+<p>De forma similar se implementa el delete:</p>
+<pre><code><span class="hl-0">http</span><span class="hl-1">:</span><span class="hl-2">//localhost:3000/funko?command=delete&amp;id=15&amp;user_name=Saul</span>
+</code></pre>
+<p>El servidor responde de manera similar al anteriror pero con diferentes mensajes de error.</p>
+
+<a href="#3-conclusión" id="3-conclusión" style="color: inherit; text-decoration: none;">
+  <h2>3. Conclusión</h2>
+</a>
+<p>A lo largo de la realización de la práctica me he familiarizado con el uso de la API sincrona de Node.js para tranajar con fichero así como el uso de la librería yargs para la gestión de parámetros de una entrada por linea de comando y el uso de chalk para destacar mensajes mostrados por consola.</p>
+
+<a href="#4-bibliografía" id="4-bibliografía" style="color: inherit; text-decoration: none;">
+  <h2>4. Bibliografía</h2>
+</a>
+<ul>
+<li><p><a href="https://ull-esit-inf-dsi-2223.github.io/prct10-fs-proc-sockets-funko-app/">Enunciado de la práctica</a></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions">Expresiones regulares</a></p>
+</li>
+<li><p><a href="https://www.w3schools.com/js/js_string_methods.asp">Métodos de strings</a></p>
+</li>
+<li><p><a href="https://www.tutorialspoint.com/typescript/typescript_arrays.htm">Información de arrays</a></p>
+</li>
+<li><p><a href="https://www.tutorialesprogramacionya.com/angularya/detalleconcepto.php?punto=23&codigo=23&inicio=20">Clases en typescript</a></p>
+</li>
+</ul>
+<hr>
+<p>Autor: Saúl Martín García</p>
+<p>Correo: <a href="mailto:alu0101405810@ull.edu.es">alu0101405810@ull.edu.es</a></p>
+<pre><code>
+</code></pre>
+</div></div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<nav class="tsd-navigation primary">
+<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li class="current selected"><a href="modules.html">ull-<wbr/>esit-<wbr/>inf-<wbr/>dsi-<wbr/>22-<wbr/>23-<wbr/>prct11-<wbr/>http-<wbr/>express-<wbr/>funko-<wbr/>app-<wbr/>smarga</a>
+<ul>
+<li class="tsd-kind-module"><a href="modules/Enums_Funk_Genres.html">Enums/<wbr/>Funk_<wbr/>Genres</a></li>
+<li class="tsd-kind-module"><a href="modules/Enums_Funk_Types.html">Enums/<wbr/>Funk_<wbr/>Types</a></li>
+<li class="tsd-kind-module"><a href="modules/Funkos_Funko.html">Funkos/<wbr/>Funko</a></li>
+<li class="tsd-kind-module"><a href="modules/Funkos_FunkoUserDataBase.html">Funkos/<wbr/>Funko<wbr/>User<wbr/>Data<wbr/>Base</a></li></ul></li></ul></div></details></nav></div></div>
+<div class="container tsd-generator">
+<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<div class="overlay"></div><script src="assets/main.js"></script></body></html>
